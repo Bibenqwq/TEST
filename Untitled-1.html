@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2-Team Showcase</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .team {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            position: relative;
+            overflow: hidden;
+        }
+        .team img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+            transition: transform 0.3s ease;
+        }
+        .social-icons {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            display: flex;
+            gap: 10px;
+            transition: transform 0.3s ease;
+        }
+        .social-icons a {
+            text-decoration: none;
+            color: white;
+            background: #333;
+            padding: 10px;
+            border-radius: 50%;
+            font-size: 16px;
+        }
+        .team:hover img {
+            transform: scale(1.1);
+        }
+        .team:hover .social-icons {
+            transform: translate(-50%, -50%) scale(1);
+        }
+    </style>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <h1>2-Team Showcase</h1>
+    <div class="container">
+        <div class="team">
+            <img src="img/kuyalukes (2).jpg" alt="Luke De Guzman">
+            <h2>Luke De Guzman</h2>
+            <p>Owner/Manager</p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/luke.deguzman.3532"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/rainmountain24/"><i class="fab fa-instagram"></i></a>
+            </div>
+            <p class="text-center mb-0">"Life is <span style="font-weight: bold;">ALOHA</span>, live <span style="font-weight: bold;">ALOHA</span> to the fullest"</p>
+        </div>
+        <div class="team">
+            <img src="img/atericagandaders3.jpg" alt="Rica Mae Ayap">
+            <h2>Rica Mae Ayap</h2>
+            <p>Assistant Manager</p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/ayap.rica.mae"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/iamyyourrickx?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><i class="fab fa-instagram"></i></a>
+            </div>
+            <p class="text-center mb-0">"One <span style="font-weight: bold;">MAHALO</span> brings one <span style="font-weight: bold;">OHANA</span> together."</p>
+        </div>
+    </div>
+</body>
+</html>
