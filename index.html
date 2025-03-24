@@ -104,180 +104,162 @@
                                 </div>
                             </div>
                             
-                        <!-- Booking Form Overlay -->
-    <div class="booking-overlay" id="bookingOverlay" onclick="closeBookingForm()">
-        <div class="booking-container" id="bookingContainer" onclick="event.stopPropagation();">
-            <span class="booking-modal-header d-flex justify-content-between mb-4">
-                <h2 class="text-center text-uppercase">Book Now</h2>
-                <span class="close-btn text-dark" onclick="closeBookingForm()">×</span>
-            </span>
-    
-            <form action="https://api.web3forms.com/submit" method="POST">
-                <input type="hidden" name="access_key" value="d1cb4a45-dca5-47d5-bb25-4744b9df69f2">
-    
-                <div class="mb-3">
-                    <input type="text" class="form-control" name="name" placeholder="Your Name" required>
-                </div>
-                <div class="mb-3">
-                    <input type="email" class="form-control" name="email" placeholder="Your Email" required>
-                </div>
-                <div class="mb-3">
-                    <input type="tel" class="form-control" name="phone" placeholder="Phone" required onkeypress="return isNumber(event)">
-                </div>
-    
-                <div class="mb-3">
-                    <select class="form-select" id="packageSelect" name="package" required onchange="updateTotal()">
-                        <option value="" selected disabled>Select Package</option>
-                        <option value="DAYTOUR" data-price="4488">DAYTOUR - ₱4,488</option>
-                        <option value="OVERNIGHT" data-price="5488">OVERNIGHT - ₱5,488</option>
-                        <option value="NIGHT TOUR" data-price="2888">NIGHT TOUR - ₱2,888</option>
-                        <option value="SUPER ALL-IN" data-price="17488">SUPER ALL-IN - ₱17,488</option>
-                    </select>
-                </div>
-    
-                <div class="mb-3">
-                    <label class="fw-bold" style="color: black;">Add-ons</label>
-                    <div class="form-check">
-                        <input class="form-check-input addon" type="checkbox" value="1998" data-name="1 ROOM" onchange="updateTotal()"> 
-                        <span style="color: black;">1 Room - ₱1,998</span>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input addon" type="checkbox" value="3988" data-name="2 ROOMS" onchange="updateTotal()"> 
-                        <span style="color: black;">2 Rooms - ₱3,988</span>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input addon" type="checkbox" value="1488" data-name="KTV" onchange="updateTotal()"> 
-                        <span style="color: black;">KTV - ₱1,488</span>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input addon" type="checkbox" value="400" data-name="PROPANE TANK" onchange="updateTotal()"> 
-                        <span style="color: black;">Propane Tank - ₱400</span>
-                    </div>
-                </div>
-    
-                <div class="mb-3">
-                    <input class="form-control" type="date" name="date" id="datePicker" placeholder="Date" required>
-                </div>
-    
-                <div class="mb-3">
-                    <select class="form-select" id="number" name="guests" required onchange="updateTotal()">
-                        <option value="" disabled selected>Number of Guests</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                        <option value="11">11</option>
-                        <option value="12">12</option>
-                        <option value="13">13</option>
-                        <option value="14">14</option>
-                        <option value="15">15</option>
-                    </select>
-                </div>
-    
-                <div class="mb-3">
-                    <select class="form-select" id="numberofguest" name="Added Guests" required onchange="updateTotal()">
-                        <option value="0" disabled selected>Add Guests</option>
-                        <option value="1" data-price="248">1 Guest - ₱248</option>
-                        <option value="2" data-price="496">2 Guests - ₱496</option>
-                        <option value="3" data-price="744">3 Guests - ₱744</option>
-                        <option value="4" data-price="992">4 Guests - ₱992</option>
-                        <option value="5" data-price="1240">5 Guests - ₱1240</option>
-                    </select>
-                </div>
-    
-                <div class="mb-3 total-container">
-                    <span>Total:</span>
-                    <input type="text" class="total-input" name="total" id="totalAmount" placeholder="₱0.00" readonly>
-                    <input type="hidden" id="total_hidden">
-                </div>
-    
-                <button type="submit" class="btn btn-primary">Book Now</button>
-            </form>
-        </div>
-    </div>
+                     <!-- Booking Form Overlay -->
+<div class="booking-overlay" id="bookingOverlay" onclick="closeBookingForm()">
+    <div class="booking-container" id="bookingContainer" onclick="event.stopPropagation();">
+        <span class="booking-modal-header d-flex justify-content-between mb-4">
+            <h2 class="text-center text-uppercase">Book Now</h2>
+            <span class="close-btn" onclick="closeBookingForm()">×</span>
+        </span>
 
-                            
-                            <!-- CSS for Animation -->
-                            <style>
-                            /* Booking Overlay */
+        <form action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="d1cb4a45-dca5-47d5-bb25-4744b9df69f2">
+
+            <div class="mb-3">
+                <input type="text" class="form-control" name="name" placeholder="Your Name" required>
+            </div>
+            <div class="mb-3">
+                <input type="email" class="form-control" name="email" placeholder="Your Email" required>
+            </div>
+            <div class="mb-3">
+                <input type="tel" class="form-control" name="phone" placeholder="Phone" required onkeypress="return isNumber(event)">
+            </div>
+
+            <div class="mb-3">
+                <select class="form-select" id="packageSelect" name="package" required onchange="updateTotal()">
+                    <option value="" selected disabled>Select Package</option>
+                    <option value="DAYTOUR" data-price="4488">DAYTOUR - ₱4,488</option>
+                    <option value="OVERNIGHT" data-price="5488">OVERNIGHT - ₱5,488</option>
+                    <option value="NIGHT TOUR" data-price="2888">NIGHT TOUR - ₱2,888</option>
+                    <option value="SUPER ALL-IN" data-price="17488">SUPER ALL-IN - ₱17,488</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label class="fw-bold">Add-ons</label>
+                <div class="form-check">
+                    <input class="form-check-input addon" type="checkbox" value="1998" data-name="1 ROOM" onchange="updateTotal()"> 1 Room - ₱1,998
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input addon" type="checkbox" value="3988" data-name="2 ROOMS" onchange="updateTotal()"> 2 Rooms - ₱3,988
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input addon" type="checkbox" value="1488" data-name="KTV" onchange="updateTotal()"> KTV - ₱1,488
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input addon" type="checkbox" value="400" data-name="PROPANE TANK" onchange="updateTotal()"> Propane Tank - ₱400
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <input class="form-control" type="date" name="date" id="datePicker" required>
+            </div>
+
+            <div class="mb-3">
+                <select class="form-select" id="number" name="guests" required onchange="updateTotal()">
+                    <option value="" disabled selected>Number of Guests</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <select class="form-select" id="numberofguest" name="Added Guests" required onchange="updateTotal()">
+                    <option value="0" disabled selected>Add Guests</option>
+                    <option value="1" data-price="248">1 Guest - ₱248</option>
+                    <option value="2" data-price="496">2 Guests - ₱496</option>
+                    <option value="3" data-price="744">3 Guests - ₱744</option>
+                    <option value="4" data-price="992">4 Guests - ₱992</option>
+                    <option value="5" data-price="1240">5 Guests - ₱1240</option>
+                </select>
+            </div>
+
+            <div class="mb-3 total-container">
+                <span>Total:</span>
+                <input type="text" class="total-input" name="total" id="totalAmount" placeholder="₱0.00" readonly>
+                <input type="hidden" id="total_hidden">
+            </div>
+
+            <button type="submit" class="btn btn-primary">Book Now</button>
+        </form>
+    </div>
+</div>
+
+<!-- CSS for Minimalist Design -->
+<style>
 .booking-overlay {
     position: fixed;
     left: 0;
     width: 100%;
-   
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
     display: flex;
     justify-content: center;
     align-items: center;
-    
-    
-    /* Hidden by default */
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
 }
 
-/* Booking Container */
 .booking-container {
-    background: white;
+    background: #fff;
     padding: 30px;
     border-radius: 10px;
-    width: 80%; /* Make the form wider */
-    max-width: 800px; /* Limit max width */
-    max-height: 90vh; /* Prevent it from overflowing the screen */
-    min-height: max-content;
+    width: 80%;
+    max-width: 600px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     transform: translateY(50px);
     opacity: 0;
     transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
 
-/* When active, show overlay */
 .booking-overlay.active {
     opacity: 1;
     visibility: visible;
-    scale: 0.92;
-    margin: 10px, 0, 0, 0;
-    z-index: 99999;
 }
 
-/* When active, slide up the form */
 .booking-container.active {
     transform: translateY(0);
     opacity: 1;
 }
 
-/* Responsive Adjustments */
-@media screen and (max-width: 1024px) {
+.close-btn {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    background: red;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    background: darkred;
+}
+
+@media screen and (max-width: 768px) {
     .booking-container {
         width: 90%;
-        max-width: 700px;
         padding: 20px;
     }
 }
-
-@media screen and (max-width: 600px) {
-    .booking-container {
-        width: 95%;
-        max-width: 100%;
-        padding: 15px;
-    }
-
-    .booking-container h2 {
-        font-size: 20px;
-    }
-
-    .booking-container input,
-    .booking-container select {
-        font-size: 14px;
-    }
-}
-
-
-                            </style>
+</style>
 
 <script>
     function updateTotal() {
